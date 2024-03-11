@@ -10,6 +10,8 @@ gem "rackup"
 
 
 
+
 group :development do
   gem "tux"
+  gem "sinatra-rax"
 end

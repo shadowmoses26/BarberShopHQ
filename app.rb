@@ -6,6 +6,7 @@ require 'sinatra/reloader'
 require 'sinatra/activerecord'
 require 'rackup'
 
+
 configure :development do
 	#set :port, 5433
 	set :database, {adapter: 'postgresql',  encoding: 'unicode', database: 'BarberShop', pool: 2, username: 'postgres', password: 'root', port: '5433'}
@@ -21,5 +22,5 @@ end
 
 
 get '/' do
-	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"			
-end
+	erb :index
+	end
