@@ -7,7 +7,7 @@ require 'sinatra/activerecord'
 set :database, "postgres:barbershop.db"
 
 class Client < ActiveRecord::Base
-	
+
 end
 
 get '/' do
