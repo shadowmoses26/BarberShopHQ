@@ -22,5 +22,7 @@ end
 
 
 get '/' do
+	@barbers = Barber.order "created_at DESC"
+
 	erb :index
 	end

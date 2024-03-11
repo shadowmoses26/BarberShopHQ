@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_11_085243) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "client", force: :cascade do |t|
+  create_table "clients", force: :cascade do |t|
     t.string "name"
     t.string "phone"
     t.string "datestamp"
@@ -28,14 +28,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_11_085243) do
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "contacts", primary_key: "contacts_id", id: :serial, force: :cascade do |t|
-    t.string "contacts_name", limit: 100
-    t.string "contacts_phone", limit: 100
-    t.string "date_stamp", limit: 100
-    t.string "barber", limit: 100
-    t.string "color", limit: 100
   end
 
 end
