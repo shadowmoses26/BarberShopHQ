@@ -9,7 +9,7 @@ require 'rackup'
 
 configure :development do
 	#set :port, 5433
-	set :database, {adapter: 'postgresql',  encoding: 'unicode', database: 'BarberShop', pool: 2, username: 'postgres', password: 'root', port: '5433'}
+	set :database,{adapter: 'postgresql',  encoding: 'unicode', database: 'BarberShop', pool: 2, username: 'postgres', password: 'root', port: '5433'}
 end
 
 class Client < ActiveRecord::Base
@@ -67,4 +67,9 @@ get '/bookings' do
 	@clients = Client.order('created_at DESC')
 	erb :bookings
 
+end
+
+get'/client/:id' do
+	@client = Client.find(params[:id])
+	erb :client
 end
