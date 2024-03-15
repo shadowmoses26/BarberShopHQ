@@ -18,6 +18,9 @@ end
 class Barber < ActiveRecord::Base
 end
 
+class Contact < ActiveRecord::Base
+end
+
 before do
 	@barbers = Barber.all
 end
@@ -31,6 +34,10 @@ end
 
 get '/visit' do
 	erb :visit
+end
+
+get '/contacts' do
+	erb :contacts
 end
 
 post '/visit' do
